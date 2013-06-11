@@ -3,22 +3,22 @@ package br.com.livrariasofia.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookStore {
 
+
+public class BookStore {
+	
+	private Book book;
+	
 	private ArrayList<Book> bookList;
 	
 	public BookStore() {
+		
 		this.bookList = new ArrayList<Book>();
-		
-	/*	Book book = new Book("As cronicas de nárnia","BlaBlaBla","Narnialandia", 1, 0);
-		Book book2 = new Book("Patinho feioa","Eles morrem no final","Brincadeira", 2, 0);
-		Book book3 = new Book("Branca de neve","Tem 7 anões","disney?",3, 0);
-		BookCollection lc = new BookCollection("A sociedade do anel", "tem hobbits", "jrrt", 1, 3,4);
-		bookList.add(book);
-		bookList.add(book2);
-		bookList.add(book3);
-		bookList.add(lc);*/
-		
+	}
+	
+	public BookStore(Book mockedBook) {
+		this.bookList = new ArrayList<Book>();
+		this.bookList.add(mockedBook);
 	}
 
 	public boolean add(Book book){
@@ -47,6 +47,29 @@ public class BookStore {
 			}
 		}
 	}
-	
+
+	public ArrayList<Book> getMaxPrice(ArrayList<Book> bookList , double value) {
+		
+		ArrayList<Book> list = new ArrayList<Book>();
+		
+		for (Book book : bookList) 
+			if(book.finalPrice() < value)
+				list.add(book);	
+
+		return list;
+	}
+
+	public ArrayList<Book> getMinPrice(ArrayList<Book> booklist, double value ) {
+
+		ArrayList<Book> list = new ArrayList<Book>();
+		
+		for (Book book : booklist) {
+			if(book.finalPrice() > value)
+			{
+				list.add(book);
+			}
+		}
+		return list;
+	}
 
 }

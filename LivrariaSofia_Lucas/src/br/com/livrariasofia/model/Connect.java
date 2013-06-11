@@ -6,7 +6,7 @@ public class Connect {
 	public static void main(String[] args) throws SQLException {
 		Connection conx = null;
 		Statement stmt = null;
-		// String Driver="";
+		//String Driver="";
 		String URL = "jdbc:mysql://localhost:3306/";
 		String db = "mydb";
 		String u_name = "root";

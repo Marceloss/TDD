@@ -45,7 +45,7 @@ public class LivSofiaController extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 
     	BookStore bookStore = new BookStore();
-    	Book livroParam = new Book(titulo, descricao, autor, id, 0);
+    	Book livroParam = new Book(titulo, descricao, autor, id, 0.0);
     	
     	if(request.getParameter("volume").equals("")) {
     		Book book = new Book(descricao,autor,titulo, id, 0);

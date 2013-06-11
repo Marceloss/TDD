@@ -7,13 +7,11 @@ public class BookCollection extends Book {
 
 	public BookCollection(String titulo, String descricao, String autor, 
 			int volume, int qtdLivros, int id, int installment) {
-		super(titulo, descricao, autor,id ,0);
+		super(titulo, descricao, autor,id, 0d);
 		this.volume = volume;
 		if(qtdLivros >= 2){
 			this.qtdLivros = qtdLivros;  
-		}
-		
-		
+		}		
 	}
 
 	public int getVolume() {

@@ -39,11 +39,8 @@ public class BookTest {
 		//assertEquals("installment", 33, book3.finalInstallmentValue(), deltaForDoubleComparison);
 		
 		//assertEquals("installment", 20, book4.finalInstallmentValue(), deltaForDoubleComparison);
-	//	assertEquals("payment", 6, book3.paymentConditions(), deltaForDoubleComparison);
-	//	assertEquals("payment", 12, book4.paymentConditions(), deltaForDoubleComparison);
+		//assertEquals("payment", 6, book3.paymentConditions(), deltaForDoubleComparison);
+		//assertEquals("payment", 12, book4.paymentConditions(), deltaForDoubleComparison);
 	}
 
-
-	
-	
 }
